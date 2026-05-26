@@ -27,7 +27,7 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal
     - name: Publish
-      run: dotnet publish -o dist --no-build
+      run: dotnet publish -o dist 
     - name: Publish Artifacts
       uses: actions/upload-artifact@v4
       with:
