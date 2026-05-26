@@ -34,4 +34,8 @@ jobs:
       with:
         name: drop
         path: dist/
-        
+    - name: Deploy to Azure
+      uses: azure/webapps-deploy@v3.0.8
+      with:
+        publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
+        package: dist/
